@@ -42,7 +42,8 @@ jobs:
           DW_API_KEY: ${{ secrets.DATAWRAPPER_API_KEY }}
           DW_CHART_ID: Ix07k 
         run: |
-          curl -X POST \
+          curl -X PATCH \
             -H "Authorization: Bearer $DW_API_KEY" \
             -H "Content-Type: application/json" \
-            https://api.datawrapper.de/v3/charts/$DW_CHART_ID/publish
+            -d '{"metadata": {"data": {"external-data": "https://samcardwell44.github.io/trustedinstallers/write_to_csv/data.csv"}}}' \
+            https://api.datawrapper.de/v3/charts/$DW_CHART_ID
