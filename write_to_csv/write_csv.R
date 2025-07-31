@@ -7,5 +7,8 @@ url <- "https://docs.google.com/spreadsheets/d/1KDw2dfxzstUuZDmGq-g1g2Cxlw6FbfU7
 # Read the data
 data <- gsheet2tbl(url)
 
+message(head(data, 20))
+
 #write to csv
 write.csv(data, "data.csv", row.names = FALSE)
+
