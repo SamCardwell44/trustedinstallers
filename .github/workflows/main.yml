@@ -36,3 +36,13 @@ jobs:
           git add write_to_csv/data.csv
           git commit -m "Update data.csv from Google Sheets" || echo "No changes to commit"
           git push
+
+      - name: Republish Datawrapper chart
+        env:
+          DW_API_KEY: ${{ secrets.DATAWRAPPER_API_KEY }}
+          DW_CHART_ID: Ix07k 
+        run: |
+          curl -X POST \
+            -H "Authorization: Bearer $DW_API_KEY" \
+            -H "Content-Type: application/json" \
+            https://api.datawrapper.de/v3/charts/$DW_CHART_ID/publish
