@@ -38,7 +38,7 @@ jobs:
           git push
           
       - name: Wait for GitHub Pages to deploy
-        run: sleep 30
+        run: sleep 240
       
       - name: Refresh chart data from external CSV
         env:
