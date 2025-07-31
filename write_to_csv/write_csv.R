@@ -1,3 +1,4 @@
+install.packages("gsheet")
 library(gsheet)
 
 #Define URL
