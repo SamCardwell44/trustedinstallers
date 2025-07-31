@@ -10,5 +10,5 @@ data <- gsheet2tbl(url)
 message(head(data, 20))
 
 #write to csv
-write.csv(data, "data.csv", row.names = FALSE)
+write.csv(data, "write_to_csv/data.csv", row.names = FALSE)
 
