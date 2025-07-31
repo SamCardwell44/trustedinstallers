@@ -2,7 +2,7 @@ install.packages("gsheet")
 library(gsheet)
 
 #Define URL
-url <- "https://docs.google.com/spreadsheets/d/1kJfsVe_o6ZthW6j7ZhtgPkjgT_6SnHuMtAkLHjlA0uk/edit?usp=sharing"
+url <- "https://docs.google.com/spreadsheets/d/1KDw2dfxzstUuZDmGq-g1g2Cxlw6FbfU7CLjUjsqcnnk/edit?usp=sharing"
 
 # Read the data
 data <- gsheet2tbl(url)
