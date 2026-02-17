@@ -2,7 +2,7 @@ name: Update CSV from Google Sheets (R)
 
 on:
   schedule:
-    - cron: "0 8 * * *"
+    - cron: "0 8 * * 1,4"
   workflow_dispatch:
 
 jobs:
